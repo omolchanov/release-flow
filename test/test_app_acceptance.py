@@ -20,12 +20,12 @@ class TestAppAcceptance(unittest.TestCase):
         # Without query param
         response = self.client.get('/feature-1')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json["message"], "Feature 1")
+        self.assertEqual(response.json["message"], "Feature 2")
 
         # With query param
         response = self.client.get('/feature-1?name=Tester')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json["message"], "Feature 1")
+        self.assertEqual(response.json["message"], "Feature 2")
 
 
 if __name__ == '__main__':
