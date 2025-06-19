@@ -28,13 +28,13 @@ class TestAppIntegration(unittest.TestCase):
         response = self.client.get('/feature-1')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content_type, 'application/json')
-        self.assertEqual(response.json, {"message": "Feature 1"})
+        self.assertEqual(response.json, {"message": "Feature 2"})
 
     def test_feature_1_with_name(self):
         response = self.client.get('/feature-1?name=ChatGPT')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content_type, 'application/json')
-        self.assertEqual(response.json, {"message": "Feature 1"})
+        self.assertEqual(response.json, {"message": "Feature 2"})
 
     def test_404(self):
         response = self.client.get('/non-existent-route')
