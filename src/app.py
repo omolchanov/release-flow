@@ -45,7 +45,7 @@ def home():
 
 @app.route('/feature-1')
 def featurer_1():
-    return jsonify(message="Feature 1"), 200
+    return jsonify(message="Feature 2"), 200
 
 
 if __name__ == '__main__':
