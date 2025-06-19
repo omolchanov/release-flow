@@ -48,6 +48,11 @@ def featurer_1():
     return jsonify(message="Feature 2"), 200
 
 
+@app.route('/email')
+def feature_email():
+    return jsonify(message="Emails have been sent"), 200
+
+
 if __name__ == '__main__':
     app.run()
 
